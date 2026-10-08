@@ -5,7 +5,7 @@ import { useId, useState } from "react";
 const DEFAULT_QUERY = `{
   me { name location workAuthorization }
   projects(status: PRODUCTION) { name since stack }
-  requirements(level: HONEST_GAP) { requirement evidence }
+  door2doorStats { label value }
 }`;
 
 export default function GraphqlPlayground() {

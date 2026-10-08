@@ -1,6 +1,6 @@
 # yalmeida.dev
 
-Personal site for Yuri Almeida, written as a job-application page. It is a small Next.js
+Personal site for Yuri Almeida, featuring selected projects and production work. It is a small Next.js
 app with a GraphQL API that serves the same content as the page, a Vitest suite for that
 API, and a GitHub Actions workflow that runs on every push.
 
@@ -23,10 +23,10 @@ Node 22 or newer.
 
 ```
 app/
-  page.tsx              the application page
-  resume/page.tsx       printable resume (print styles in globals.css)
+  page.tsx              the portfolio page
+  resume/page.tsx       redirect to the resume PDF in public/
   api/graphql/route.ts  GraphQL Yoga mounted on a Next.js route handler
-  globals.css           all styling: plain CSS, light and dark from prefers-color-scheme
+  globals.css           plain CSS: responsive portfolio and printable resume
 components/
   GraphqlPlayground.tsx client component; POSTs the query to /api/graphql
   RecentRepos.tsx       server component; GitHub REST API, revalidated hourly
@@ -58,7 +58,7 @@ Schema-first with GraphQL Yoga. `Query` exposes `me`, `projects(status)`, `proje
 
 ## Accessibility and performance choices
 
-Semantic landmarks, a skip link, visible focus states, contrast checked in both themes,
+Semantic landmarks, a skip link, visible focus states, responsive layouts,
 no information carried by colour alone, reduced motion respected, no client-side JS except
 the playground. No analytics or tracking of any kind.
 

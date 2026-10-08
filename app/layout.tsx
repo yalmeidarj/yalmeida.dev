@@ -8,11 +8,11 @@ export const metadata: Metadata = {
     template: "%s | Yuri Almeida",
   },
   description:
-    "Full-stack developer in Toronto. Sole developer of Door2Door, a real-time React platform field sales teams use every day. Application for Web Developer at Presto.",
+    "Yuri Almeida is a full-stack developer in Toronto building web and mobile apps. Explore Door2Door, NerdyPup, and open-source projects.",
   openGraph: {
     title: "Yuri Almeida, full-stack developer in Toronto",
     description:
-      "Production React and Node work, an offline-first mobile app, and an honest line-by-line read of the Presto Web Developer posting.",
+      "Web and mobile software, from the first conversation to production. Selected work by Toronto developer Yuri Almeida.",
     url: "https://yalmeida.dev",
     siteName: "yalmeida.dev",
     type: "website",

@@ -122,7 +122,7 @@ export const requirements: Requirement[] = [
     id: "html-css-js",
     requirement: "Hands-on HTML, CSS and JavaScript",
     evidence:
-      "Every project here, plus this page: hand-written semantic HTML and CSS, no UI framework, light and dark themes from system preference.",
+      "React and TypeScript across web and mobile projects. This portfolio uses semantic HTML, responsive layouts and plain CSS.",
     level: "STRONG",
   },
   {
@@ -150,7 +150,7 @@ export const requirements: Requirement[] = [
     id: "graphql",
     requirement: "GraphQL API integration",
     evidence:
-      "Used on freelance work a few years back, not in my current stack. So instead of claiming it, this site exposes its own GraphQL API built with GraphQL Yoga, and the playground above queries it.",
+      "Used in earlier freelance projects. Current production work uses Convex; this portfolio includes a separate GraphQL Yoga API and interactive playground.",
     level: "HONEST_GAP",
   },
   {
@@ -171,12 +171,12 @@ export const requirements: Requirement[] = [
     id: "a11y",
     requirement: "Accessibility (WCAG 2.1)",
     evidence:
-      "This page: landmarks, skip link, visible focus states, 4.5:1 contrast in both themes, no information carried by color alone, reduced-motion respected. Form components in Door2Door use labelled Radix primitives.",
+      "This page uses landmarks, a skip link, visible focus states, text labels alongside status colours and reduced-motion styles. Form components in Door2Door use labelled Radix primitives.",
     level: "SOLID",
   },
   {
     id: "ambiguity",
-    requirement: "Thrives in fast-paced, ambiguous startup environments",
+    requirement: "Product ownership and support",
     evidence:
       "Three years owning a product real teams depend on daily, with requirements arriving from ops, field managers and a client's GIS team rather than a spec: I scope it, build it, ship it, and answer the phone when it breaks.",
     level: "STRONG",
@@ -190,21 +190,21 @@ export const requirements: Requirement[] = [
   },
   {
     id: "cicd",
-    requirement: "Nice to have: CI/CD (GitHub Actions)",
+    requirement: "CI/CD (GitHub Actions)",
     evidence:
       "This site runs typecheck, tests and a build in GitHub Actions on every push, with Vercel preview deployments per branch. Mobile releases use scripted EAS and Gradle builds.",
     level: "SOLID",
   },
   {
     id: "realtime",
-    requirement: "Nice to have: real-time or data-heavy dashboards",
+    requirement: "Real-time dashboards",
     evidence:
       "Door2Door's admin dashboard: live agent map and list over Convex subscriptions, shift and inactivity tracking, KPI charts, and spreadsheet exports over house records layered from Salesforce and ArcGIS.",
     level: "STRONG",
   },
   {
     id: "ai-native",
-    requirement: "Nice to have: AI-native company experience",
+    requirement: "AI product integrations",
     evidence:
       "Built Dori, an AI assistant inside the Door2Door dashboard on the Vercel AI SDK; NerdyPup's Pro assistant with a model fallback and timeouts; claude-proxy; an MCP server. I use agents daily and know where they break.",
     level: "SOLID",

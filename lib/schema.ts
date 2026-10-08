@@ -40,7 +40,7 @@ export const typeDefs = /* GraphQL */ `
   }
 
   type Query {
-    "The applicant."
+    "About Yuri Almeida."
     me: Person!
     "Door2Door production numbers, counted from a database snapshot on 2026-10-08."
     door2doorStats: [Stat!]!
@@ -48,7 +48,7 @@ export const typeDefs = /* GraphQL */ `
     projects(status: ProjectStatus): [Project!]!
     "One project by slug."
     project(slug: ID!): Project
-    "The Presto posting, requirement by requirement, with where I have done it."
+    "Development experience, with examples from projects and areas for further learning."
     requirements(level: EvidenceLevel): [Requirement!]!
   }
 `;
