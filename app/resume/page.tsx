@@ -109,7 +109,7 @@ export default function Resume() {
         <article className="job">
           <header>
             <strong>Hospitality, hotels and restaurants</strong>
-            <span>Rio de Janeiro · until 2013</span>
+            <span>Rio de Janeiro · 2011 to 2013</span>
           </header>
           <ul className="plain">
             <li>
