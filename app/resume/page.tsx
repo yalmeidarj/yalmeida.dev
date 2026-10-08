@@ -26,10 +26,10 @@ export default function Resume() {
       <main id="main">
         <h2>Summary</h2>
         <p>
-          Three years as the sole developer of a production React and Node platform that field
-          sales teams use every day. Comfortable owning a product end to end: frontend, backend,
-          auth, integrations, releases and support. Background in hospitality, so I build for
-          people working under pressure.
+          Three years owning a production React and Node platform that field sales teams use
+          every day: frontend, backend, auth, integrations, releases and support, with
+          requirements negotiated between ops, field managers and a client&rsquo;s data team.
+          Background in hospitality, so I build for people working under pressure.
         </p>
 
         <h2>Skills</h2>
@@ -54,8 +54,9 @@ export default function Resume() {
           <ul className="plain">
             <li>
               Replaced the company&rsquo;s spreadsheet workflow with Door2Door, a multi-tenant
-              canvassing platform (Next.js, React, Convex, NextAuth) in daily use by field teams;
-              more than 120,000 households engaged through it since launch.
+              canvassing platform (Next.js, React, Convex, NextAuth) in daily use by field teams:
+              120,000+ households engaged since launch, 88 sites, 1,880 agent shifts and 56,000
+              audited house edits in the current backend alone.
             </li>
             <li>
               Built a real-time admin dashboard: live agent map, shift and break tracking,
@@ -64,7 +65,12 @@ export default function Resume() {
             </li>
             <li>
               Designed and shipped a versioned, admin-configurable form engine with an atomic,
-              idempotent, audited submission pipeline.
+              idempotent, audited submission pipeline, so rule changes requested by field
+              managers no longer need a deploy. Case study at yalmeida.dev.
+            </li>
+            <li>
+              Gather requirements directly from the ops team, field managers and the
+              client&rsquo;s GIS and Salesforce stakeholders; write specs before building.
             </li>
             <li>
               Integrated Salesforce and ArcGIS FieldMaps for house records and photo sync;

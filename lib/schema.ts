@@ -1,5 +1,5 @@
 import { createSchema } from "graphql-yoga";
-import { me, projects, requirements, type ProjectStatus } from "./portfolio";
+import { me, projects, requirements, stats, type ProjectStatus } from "./portfolio";
 
 export const typeDefs = /* GraphQL */ `
   enum ProjectStatus { PRODUCTION SHIPPING TESTING OPEN_SOURCE }
@@ -33,9 +33,17 @@ export const typeDefs = /* GraphQL */ `
     level: EvidenceLevel!
   }
 
+  type Stat {
+    label: String!
+    value: String!
+    note: String!
+  }
+
   type Query {
     "The applicant."
     me: Person!
+    "Door2Door production numbers, counted from a database snapshot on 2026-10-08."
+    door2doorStats: [Stat!]!
     "Projects, optionally filtered by status."
     projects(status: ProjectStatus): [Project!]!
     "One project by slug."
@@ -48,6 +56,7 @@ export const typeDefs = /* GraphQL */ `
 export const resolvers = {
   Query: {
     me: () => me,
+    door2doorStats: () => stats,
     projects: (_: unknown, args: { status?: ProjectStatus }) =>
       args.status ? projects.filter((p) => p.status === args.status) : projects,
     project: (_: unknown, args: { slug: string }) =>

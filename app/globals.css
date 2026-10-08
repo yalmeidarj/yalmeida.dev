@@ -181,11 +181,53 @@ dl.facts dd {
   margin: 0.25rem 0 1rem;
 }
 
+.kicker {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin: 0 0 -0.5rem;
+}
+
+pre.code {
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin: 0.5rem 0 1rem;
+  background: var(--code-bg);
+  color: var(--code-fg);
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+details.map-wrap {
+  margin: 1.5rem 0 1rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 0.75rem;
+}
+details.map-wrap summary {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.25rem 0;
+}
+details.map-wrap summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .shots {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.75rem;
   margin: 1.25rem 0 0.5rem;
+}
+.shots.wide {
+  grid-template-columns: 1fr;
 }
 .shots figure {
   margin: 0;

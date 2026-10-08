@@ -30,6 +30,26 @@ export const me = {
   workAuthorization: "Canadian permanent resident",
 };
 
+export type Stat = { label: string; value: string; note: string };
+
+// Counted from a production database snapshot taken 2026-10-08. The current
+// backend holds data since the January 2025 migration; the 120,000+ households
+// figure covers the full run since 2023.
+export const stats: Stat[] = [
+  { label: "Households engaged", value: "120,000+", note: "since 2023, across both backends" },
+  { label: "Sites", value: "88", note: "neighbourhood-scale canvassing areas" },
+  { label: "House records", value: "12,900", note: "each with a per-visit status" },
+  { label: "Agent shifts", value: "1,880", note: "4,170 tracked hours" },
+  { label: "Audited house edits", value: "56,000", note: "every change logged with who and when" },
+];
+
+export type Shot = { src: string; alt: string; caption: string; width: number; height: number };
+
+// Anonymized screenshots of the Door2Door web dashboard. Drop files in
+// public/images/ and add an entry; the section renders nothing while empty.
+// Wanted: live agent map, filterable house table, form builder, a loading/empty/error state.
+export const dashboardShots: Shot[] = [];
+
 export const projects: Project[] = [
   {
     slug: "door2door",
@@ -37,7 +57,7 @@ export const projects: Project[] = [
     status: "PRODUCTION",
     summary:
       "Multi-tenant platform for door-to-door field sales. Admins run sites, streets and houses from a real-time web dashboard; agents log visits from a mobile app. In daily production use by TDX fiber sales teams since 2023.",
-    role: "Sole developer: product, frontend, backend, auth, integrations, support.",
+    role: "I own it end to end: product decisions, frontend, backend, auth, integrations, releases and support.",
     stack: ["Next.js 15", "React 19", "TypeScript", "Convex", "NextAuth", "shadcn/ui", "Tailwind", "Leaflet", "Recharts", "Stripe", "Vitest", "Vercel"],
     url: "https://www.door2door.systems",
     since: "2023",
@@ -130,7 +150,7 @@ export const requirements: Requirement[] = [
     id: "graphql",
     requirement: "GraphQL API integration",
     evidence:
-      "Used on freelance work a few years back, not in my current stack. So instead of claiming it, this site exposes its own GraphQL API built with GraphQL Yoga, and the playground below queries it.",
+      "Used on freelance work a few years back, not in my current stack. So instead of claiming it, this site exposes its own GraphQL API built with GraphQL Yoga, and the playground above queries it.",
     level: "HONEST_GAP",
   },
   {
@@ -158,7 +178,7 @@ export const requirements: Requirement[] = [
     id: "ambiguity",
     requirement: "Thrives in fast-paced, ambiguous startup environments",
     evidence:
-      "Three years as the only developer on a product real teams depend on daily: I pick what to build, build it, ship it, and answer the phone when it breaks.",
+      "Three years owning a product real teams depend on daily, with requirements arriving from ops, field managers and a client's GIS team rather than a spec: I scope it, build it, ship it, and answer the phone when it breaks.",
     level: "STRONG",
   },
   {

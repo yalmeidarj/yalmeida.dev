@@ -45,6 +45,15 @@ describe("portfolio GraphQL API", () => {
     expect(requirements.filter((r) => r.level === "HONEST_GAP")).toHaveLength(1);
   });
 
+  it("returns the Door2Door production stats", async () => {
+    const res = await run<{ door2doorStats: { label: string; value: string }[] }>(
+      "{ door2doorStats { label value } }",
+    );
+    expect(res.errors).toBeUndefined();
+    expect(res.data?.door2doorStats.length).toBeGreaterThanOrEqual(5);
+    expect(res.data?.door2doorStats[0]).toEqual({ label: "Households engaged", value: "120,000+" });
+  });
+
   it("rejects an invalid enum value", async () => {
     const res = await run("{ projects(status: BOGUS) { slug } }");
     expect(res.errors?.length).toBeGreaterThan(0);
