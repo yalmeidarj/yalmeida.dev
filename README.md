@@ -1,6 +1,6 @@
 # yalmeida.dev
 
-Personal site and job-application page for Yuri Almeida. Next.js 15, React 19, plain CSS,
+Personal site and job-application page for Yuri Almeida. Next.js 16, React 19, plain CSS,
 a GraphQL Yoga endpoint at `/api/graphql`, and a Vitest suite that runs in GitHub Actions.
 
 ```bash
