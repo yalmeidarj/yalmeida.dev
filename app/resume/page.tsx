@@ -26,10 +26,10 @@ export default function Resume() {
       <main id="main">
         <h2>Summary</h2>
         <p>
-          Three years owning a production React and Node platform that field sales teams use
-          every day: frontend, backend, auth, integrations, releases and support, with
-          requirements negotiated between ops, field managers and a client&rsquo;s data team.
-          Background in hospitality, so I build for people working under pressure.
+          Three years owning a production React and Node platform for field teams, from the
+          frontend and REST integrations to releases and support. I work out requirements with
+          ops, field managers and the client&rsquo;s data teams. Earlier hospitality work in Rio
+          informs how I build for people under pressure.
         </p>
 
         <h2>Skills</h2>
